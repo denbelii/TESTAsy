@@ -15,22 +15,17 @@ class ASVC: ASViewController<ASDisplayNode>, ASCollectionDelegateFlowLayout {
     var _collectionNode: ASCollectionNode
     var pageNumber: Int32 = 0
     let queuePage = DispatchQueue(label: "pageIncreement", qos: .userInitiated)
+    var activityIndLoadLady: UIActivityIndicatorView!
     
     init() {
         let collectionViewLoyaut = UICollectionViewFlowLayout()
         _collectionNode = ASCollectionNode(collectionViewLayout: collectionViewLoyaut)
-       // _collectionNode = ASCollectionNode(frame: CGRect(x:0, y: 0, width: 0, height: 0), collectionViewLayout: collectionViewLoyaut)
         super.init(node: _collectionNode)
         setupInitialState()
-        
-        //collectionViewLoyaut.
-        
         collectionViewLoyaut.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collectionViewLoyaut.minimumLineSpacing = 5
         collectionViewLoyaut.minimumInteritemSpacing = 5
         collectionViewLoyaut.itemSize = CGSize(width: 180, height: 280)
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,6 +42,9 @@ class ASVC: ASViewController<ASDisplayNode>, ASCollectionDelegateFlowLayout {
         super.viewDidLoad()
         _collectionNode.view.leadingScreensForBatching = 7
         _collectionNode.backgroundColor = UIColor(colorLiteralRed: 243 / 256, green: 243 / 256, blue: 243 / 256, alpha: 1)
+        activityIndLoadLady = UIActivityIndicatorView(frame: CGRect(x: view.frame.midX, y: view.frame.maxY / 2.5, width: 30, height: 30))
+        view.addSubview(activityIndLoadLady)
+        activityIndLoadLady.startAnimating()
         fetchData {
         }
     }
@@ -59,19 +57,12 @@ class ASVC: ASViewController<ASDisplayNode>, ASCollectionDelegateFlowLayout {
 }
 
 extension ASVC: ASCollectionDelegate{
-    //    func numberOfSections(in collectionNode: ASCollectionNode) -> Int {
-    //        print("_groups?.count = \(_groups?.count)")
-    //       return 0
-    //    }
-    
     func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
-        //print("_groups?.count = \(_groups?.count)")
         let group = _groups![indexPath.row]
         return GroupCellNode(lady: group)
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
-        
         return _groups?.count ?? 0
     }
 }
@@ -82,12 +73,7 @@ extension ASVC: ASCollectionDataSource{
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
     
-    
     func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
-        
-        
-        
-        
         fetchData {
             context.completeBatchFetching(true)
         }
@@ -97,9 +83,6 @@ extension ASVC: ASCollectionDataSource{
     }
     
     func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
-//        if pageNumber > 0 {
-//            return true
-//        }
         return true
     }
     
@@ -110,14 +93,9 @@ extension ASVC: ASCollectionDataSource{
     ///--------------------------------------
     
     func insertNewGroupsInCollectionViewView(_ array: [Lady]?) {
-        //_groups = groups
-        
         let section = 0
         var indexPaths = [IndexPath]()
         var i = 0
-        
-        
-        
         if let array = array,
             let groups = _groups{
             
@@ -127,16 +105,10 @@ extension ASVC: ASCollectionDataSource{
                 let path = IndexPath(row: row, section: section)
                 indexPaths.append(path)
                 i += 1
-                
             }
         }
-        //        groups?.enumerated().forEach { (row, group) in
-        //            let path = IndexPath(row: row, section: section)
-        //            indexPaths.append(path)
-        //        }
         
-        _collectionNode.insertItems(at: indexPaths)//insertRows(at: indexPaths, with: .none)
-        //_activityIndicatorView.stopAnimating()
+        _collectionNode.insertItems(at: indexPaths)
     }
     
     
@@ -157,7 +129,8 @@ extension ASVC{
                             self._groups! += array
                             
                         }, completion: { (completion) in
-                            })
+                            self.activityIndLoadLady.stopAnimating()
+                        })
                     }
                     
                     completeForBatchFetching()

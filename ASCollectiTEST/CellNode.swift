@@ -57,7 +57,7 @@ final class GroupCellNode: ASCellNode, ASNetworkImageNodeDelegate{
             
         }
         
-        onlineLabel  = createLayerBackedTextNode(attributedString: NSAttributedString(string: onlineString, attributes: [NSFontAttributeName: UIFont(name: "Avenir-Medium", size: FontSize)!, NSForegroundColorAttributeName: UIColor.green]))
+        onlineLabel  = createLayerBackedTextNode(attributedString: NSAttributedString(string: onlineString, attributes: [NSFontAttributeName: UIFont(name: "Avenir-Medium", size: FontSize)!, NSForegroundColorAttributeName: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)]))
         
         buttonCam = ASButtonNode()
         buttonCam.setTitle("Vide chat", with: UIFont(name: "Avenir-Medium", size: SmallFontSize), with: UIColor.darkGray, for: .normal)

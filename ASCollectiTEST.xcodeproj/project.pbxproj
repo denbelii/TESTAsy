@@ -25,6 +25,11 @@
 		0C0E882F1E8EE38E0083807D /* CellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E882E1E8EE38E0083807D /* CellNode.swift */; };
 		0C0E88311E8EE6B20083807D /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E88301E8EE6B20083807D /* FirstVC.swift */; };
 		0C4AF0A51E8EF437008FA80C /* ASVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF0A41E8EF437008FA80C /* ASVC.swift */; };
+		0C9045E71E9117B70094B667 /* ListLadyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9045E61E9117B70094B667 /* ListLadyVC.swift */; };
+		0C9045E91E911D430094B667 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9045E81E911D430094B667 /* MainVC.swift */; };
+		0C9045EB1E911D600094B667 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9045EA1E911D600094B667 /* LoginVC.swift */; };
+		0C9045ED1E9140900094B667 /* SegmentedForListLady.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9045EC1E9140900094B667 /* SegmentedForListLady.swift */; };
+		0C9045F11E914C710094B667 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9045F01E914C710094B667 /* ExtensionUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		0C0E882E1E8EE38E0083807D /* CellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellNode.swift; sourceTree = "<group>"; };
 		0C0E88301E8EE6B20083807D /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		0C4AF0A41E8EF437008FA80C /* ASVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASVC.swift; sourceTree = "<group>"; };
+		0C9045E61E9117B70094B667 /* ListLadyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLadyVC.swift; sourceTree = "<group>"; };
+		0C9045E81E911D430094B667 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		0C9045EA1E911D600094B667 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0C9045EC1E9140900094B667 /* SegmentedForListLady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedForListLady.swift; sourceTree = "<group>"; };
+		0C9045F01E914C710094B667 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		1A408FC73814C68A052A3704 /* Pods-ASCollectiTEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASCollectiTEST.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASCollectiTEST/Pods-ASCollectiTEST.debug.xcconfig"; sourceTree = "<group>"; };
 		606088B5D5B7F7B08F26669F /* Pods_ASCollectiTEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASCollectiTEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDB04E605E3AE6A2966C84B /* Pods-ASCollectiTEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASCollectiTEST.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASCollectiTEST/Pods-ASCollectiTEST.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,10 +135,13 @@
 			isa = PBXGroup;
 			children = (
 				0C0E87F01E8EE3160083807D /* AppDelegate.swift */,
-				0C0E88301E8EE6B20083807D /* FirstVC.swift */,
+				0C9045E81E911D430094B667 /* MainVC.swift */,
+				0C9045F21E914DEE0094B667 /* LOGIN */,
+				0C9045EE1E9140990094B667 /* List Lady */,
 				0C4AF0A41E8EF437008FA80C /* ASVC.swift */,
 				0C0E882E1E8EE38E0083807D /* CellNode.swift */,
 				0C0E88211E8EE3790083807D /* Data */,
+				0C9045EF1E914C3C0094B667 /* Utility */,
 				0C0E87F41E8EE3160083807D /* Main.storyboard */,
 				0C0E87FA1E8EE3160083807D /* Assets.xcassets */,
 				0C0E87FC1E8EE3160083807D /* LaunchScreen.storyboard */,
@@ -136,6 +149,7 @@
 				0C0E87F71E8EE3160083807D /* ASCollectiTEST.xcdatamodeld */,
 				0C9045E31E8FFDAA0094B667 /* image */,
 				0C0E87F21E8EE3160083807D /* ViewController.swift */,
+				0C0E88301E8EE6B20083807D /* FirstVC.swift */,
 			);
 			path = ASCollectiTEST;
 			sourceTree = "<group>";
@@ -162,11 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				0C0E88221E8EE3870083807D /* PostRequest.swift */,
-				0C0E88231E8EE3870083807D /* LadiesFilters.swift */,
-				0C0E88241E8EE3870083807D /* UtilityConst.swift */,
 				0C0E88251E8EE3870083807D /* KeyChain.swift */,
 				0C0E88261E8EE3870083807D /* Lady.swift */,
-				0C0E88271E8EE3870083807D /* BOFLogin.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -176,6 +187,34 @@
 			children = (
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		0C9045EE1E9140990094B667 /* List Lady */ = {
+			isa = PBXGroup;
+			children = (
+				0C9045E61E9117B70094B667 /* ListLadyVC.swift */,
+				0C0E88231E8EE3870083807D /* LadiesFilters.swift */,
+				0C9045EC1E9140900094B667 /* SegmentedForListLady.swift */,
+			);
+			name = "List Lady";
+			sourceTree = "<group>";
+		};
+		0C9045EF1E914C3C0094B667 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0C0E88241E8EE3870083807D /* UtilityConst.swift */,
+				0C9045F01E914C710094B667 /* ExtensionUIViewController.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		0C9045F21E914DEE0094B667 /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				0C9045EA1E911D600094B667 /* LoginVC.swift */,
+				0C0E88271E8EE3870083807D /* BOFLogin.swift */,
+			);
+			name = LOGIN;
 			sourceTree = "<group>";
 		};
 		337271382A51C8434E9A1599 /* Frameworks */ = {
@@ -393,8 +432,13 @@
 				0C0E87F11E8EE3160083807D /* AppDelegate.swift in Sources */,
 				0C0E882D1E8EE3870083807D /* BOFLogin.swift in Sources */,
 				0C0E882F1E8EE38E0083807D /* CellNode.swift in Sources */,
+				0C9045F11E914C710094B667 /* ExtensionUIViewController.swift in Sources */,
 				0C0E88281E8EE3870083807D /* PostRequest.swift in Sources */,
+				0C9045E71E9117B70094B667 /* ListLadyVC.swift in Sources */,
 				0C0E882C1E8EE3870083807D /* Lady.swift in Sources */,
+				0C9045E91E911D430094B667 /* MainVC.swift in Sources */,
+				0C9045ED1E9140900094B667 /* SegmentedForListLady.swift in Sources */,
+				0C9045EB1E911D600094B667 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
