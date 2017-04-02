@@ -16,16 +16,18 @@ class ASVC: ASViewController<ASDisplayNode>, ASCollectionDelegateFlowLayout {
     var pageNumber: Int32 = 0
     let queuePage = DispatchQueue(label: "pageIncreement", qos: .userInitiated)
     var activityIndLoadLady: UIActivityIndicatorView!
+    let collectionViewLoyaut = UICollectionViewFlowLayout()
+    var delegate: UpdateListLady!
     
     init() {
-        let collectionViewLoyaut = UICollectionViewFlowLayout()
+        
         _collectionNode = ASCollectionNode(collectionViewLayout: collectionViewLoyaut)
         super.init(node: _collectionNode)
         setupInitialState()
         collectionViewLoyaut.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         collectionViewLoyaut.minimumLineSpacing = 5
-        collectionViewLoyaut.minimumInteritemSpacing = 5
-        collectionViewLoyaut.itemSize = CGSize(width: 180, height: 280)
+        collectionViewLoyaut.minimumInteritemSpacing = 2
+        collectionViewLoyaut.itemSize = CGSize(width: 200, height: 300)
     }
     
     required init?(coder aDecoder: NSCoder) {

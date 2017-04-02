@@ -300,12 +300,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Andrew Klemenchenko";
 				TargetAttributes = {
 					0C0E87EC1E8EE3160083807D = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 9G5B538V4C;
+						DevelopmentTeam = KFWDSVU8BY;
 						ProvisioningStyle = Automatic;
 					};
 					0C0E88031E8EE3170083807D = {
@@ -590,7 +590,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9G5B538V4C;
+				DEVELOPMENT_TEAM = KFWDSVU8BY;
 				INFOPLIST_FILE = ASCollectiTEST/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KAN.ASCollectiTEST;
@@ -605,7 +605,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9G5B538V4C;
+				DEVELOPMENT_TEAM = KFWDSVU8BY;
 				INFOPLIST_FILE = ASCollectiTEST/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KAN.ASCollectiTEST;
