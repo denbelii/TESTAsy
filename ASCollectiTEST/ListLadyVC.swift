@@ -18,7 +18,7 @@ class ListLadyVC: UIViewController{
         let contollerChild = ASVC()
         addChildViewController(contollerChild)
         conteinerForListLady.addSubview(contollerChild.view)
-        //hideKeyBoardWhenTappedAround()
+        hideKeyBoardWhenTappedAround()
     }
     
     override func didReceiveMemoryWarning() {

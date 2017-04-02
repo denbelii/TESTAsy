@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-//extension UIViewController{
-//    func hideKeyBoardWhenTappedAround(){
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//    }
-//    
-//    func dismissKeyboard(){
-//        view.endEditing(true)
-//    }
-//}
+extension UIViewController{
+    func hideKeyBoardWhenTappedAround(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
